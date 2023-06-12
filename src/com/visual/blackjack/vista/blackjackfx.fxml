@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.visual.blackjack.controlador.RootController">
+   <center>
+      <BorderPane prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="140.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="estadoCrupier" alignment="CENTER" layoutX="150.0" layoutY="49.0" prefHeight="42.0" prefWidth="600.0" text="Crupier Virtual" textFill="YELLOW">
+                     <font>
+                        <Font name="Harrington" size="35.0" />
+                     </font>
+                  </Label>
+                  <Line endX="552.5999755859375" layoutX="348.0" layoutY="126.0" startX="-349.0" stroke="WHITE" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <bottom>
+            <AnchorPane prefHeight="140.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="estadoJugador" alignment="CENTER" layoutX="150.0" layoutY="48.0" prefHeight="42.0" prefWidth="600.0" text="Jugador Invitado" textFill="YELLOW">
+                     <font>
+                        <Font name="Harrington" size="35.0" />
+                     </font>
+                  </Label>
+                  <Line endX="681.0" layoutX="219.0" layoutY="14.0" startX="-219.0" stroke="WHITE" strokeWidth="2.0" />
+               </children>
+            </AnchorPane>
+         </bottom>
+         <left>
+            <AnchorPane fx:id="anchorPaneBotones" prefHeight="510.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="botonQuedarse" layoutX="21.0" layoutY="270.0" mnemonicParsing="false" onMouseClicked="#botonQuedarseOnMouseClicked" text="Quedarse" />
+                  <Button fx:id="botonIniciar" layoutX="31.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#botonIniciarOnMouseClicked" text="Iniciar" />
+                  <Button fx:id="botonPedir" layoutX="33.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#botonPedirOnMouseClicked" text="Pedir" />
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane fx:id="anchorPaneBaraja" prefHeight="510.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imagenBaraja" fitHeight="150.0" fitWidth="110.0" layoutX="5.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="puntosCrupier" layoutX="27.0" layoutY="55.0" text="Puntos: 0" textFill="YELLOW">
+                     <font>
+                        <Font name="Harvest Regular" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="puntosJugador" layoutX="27.0" layoutY="350.0" text="Puntos: 0" textFill="YELLOW">
+                     <font>
+                        <Font name="Harvest Regular" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <Pane fx:id="paneTablero" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>
